@@ -1,0 +1,6 @@
+@API.NewStories_HostAddress = http://localhost:5281
+
+GET {{API.NewStories_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
