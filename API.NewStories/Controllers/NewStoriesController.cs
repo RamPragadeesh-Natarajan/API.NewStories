@@ -19,19 +19,13 @@ namespace API.NewStories.Controllers
         }
 
         [HttpGet]
-        [Route("getNewStories")]
-        public async Task<List<int>> Get()
+        [Route("getNewStories/{id}")]
+        public async Task<List<StoriesDetails>> Get(int id)
         {
             _logger.LogInformation("Executing get new stories");
-            return await _newStoriesRepository.GetNewStories();
+            return await _newStoriesRepository.GetNewStories(id);
         }
 
-        [HttpGet]
-        [Route("getById")]
-        public async Task<StoriesDetails> GetStoriesUsingID(int id)
-        {
-            _logger.LogInformation("Executed get by id stories");
-            return await _newStoriesRepository.GetStorieData(id);
-        }
+       
     }
 }

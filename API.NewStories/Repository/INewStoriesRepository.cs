@@ -4,7 +4,7 @@ namespace API.NewStories.Repository
 {
     public interface INewStoriesRepository
     {
-       public Task<List<int>>  GetNewStories();
-        public Task<StoriesDetails> GetStorieData(int id);
+       public Task<List<StoriesDetails>>  GetNewStories(int pageID);
+       
     }
 }
